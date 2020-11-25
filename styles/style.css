@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+.blog-image {
+  width: 50%;
+  height: 50vh;
+  border: 1px solid red;
+  margin: 10px auto;
+}
+
+.blog-image img {
+  width: 100%;
+  height: 100%;
+}
+
+.blog-content h1 {
+  text-align: center;
+  font-size: 2rem;
+}
+
+.blog-content p {
+  font-size: 1.2rem;
+}
+
+.related-links ul {
+  list-style: none;
+}
+
+.related-links ul li {
+  margin: 0.5rem ;
+}
