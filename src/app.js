@@ -3,6 +3,7 @@ console.log('Starting Script......');
 import { blogs } from "./data.js"
 import { blogImage } from "./components/blogImage.js";
 import { blogContent } from "./components/blogContent.js";
+import { relatedLinks } from "./components/relatedLinks.js";
 
 window.onload = () => {
 
@@ -12,4 +13,7 @@ window.onload = () => {
 
     blogDiv.appendChild(blogContent(blogs[0].title, blogs[0].content));
 
+    const asideDiv = document.getElementById('related-links');
+
+    asideDiv.appendChild(relatedLinks(blogs.links));
 }

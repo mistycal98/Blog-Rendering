@@ -6,32 +6,22 @@
 </ul> */
 
 import { findBlogById } from "../helper/findBlogById.js";
-import { renderNewBlog } from "./renderNewBlog.js";
+import { blogs } from "../data.js";
 
-export const relatedLinks = (links) => {
-  return links.map((link) => {
-      
-    const div = document.createElement("div");
-    div.classList.add("related-link");
-    div.setAttribute("id", link.id);
+// export const relatedLinks = (links) => {
+  
+//   const ul = document.createElement("ul");
+//   ul.classList.add("related-links");
 
-    const p = document.createElement("p");
-    p.classList.add("link-title");
+//   return links.forEach((link) => {
+//     const li = document.createElement("li");
+//   });
+// };
 
-    const a = document.createElement("a");
-    a.textContent = link.title;
-    a.href = "#";
+// export const relatedLinks = (links) => {
 
-    p.appendChild(a);
+//   const link =  links.forEach(link => {
+    
+//   });
 
-    div.appendChild(img);
-    div.appendChild(p);
-
-    // this is done using Event Delegation
-    // div.addEventListener("click", () => {
-    //   renderNewBlog(link.id);
-    // });
-
-    return div;
-  });
-};
+// }
