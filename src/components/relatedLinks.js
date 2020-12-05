@@ -1,27 +1,29 @@
+import { loadBlog } from "../app.js";
 /* <ul>
     <li>Related Links</li>
     <li>Related Links</li>
     <li>Related Links</li>
     <li>Related Links</li>
 </ul> */
+export const relatedLinks = (links) => {
 
-import { findBlogById } from "../helper/findBlogById.js";
-import { blogs } from "../data.js";
+  let ul = document.createElement('ul');
+  ul.classList.add('related-links');
 
-// export const relatedLinks = (links) => {
-  
-//   const ul = document.createElement("ul");
-//   ul.classList.add("related-links");
+  links.forEach((link) => {
 
-//   return links.forEach((link) => {
-//     const li = document.createElement("li");
-//   });
-// };
+    let li = document.createElement('li');
+    li.classList.add('realted-link');
+    li.innerHTML = link.title;
+    li.id = link.id;
 
-// export const relatedLinks = (links) => {
+    li.addEventListener('click', (event) => {
+      loadBlog(event.target.id);
+    });
+    // console.log(li);
+    ul.appendChild(li);
+  });
 
-//   const link =  links.forEach(link => {
-    
-//   });
+  return ul;
 
-// }
+}

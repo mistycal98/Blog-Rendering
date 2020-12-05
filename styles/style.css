@@ -1,32 +1,167 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #0b0c10;
+}
+
+a {
+  text-decoration: none;
+  color: aliceblue;
+}
+
+a:hover {
+  border-bottom: 1px solid white;
+}
+
+.wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  text-align: center;
+}
+.wrapper > * {
+  padding: 10px;
+  flex: 1 100%;
+}
+/* Header Section */
+.header {
+  background-color: black;
+  color: #c6fcf1;
+  height: auto;
+  position: sticky;
+  top: 0;
+  height: auto;
+}
+#navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#navbar img {
+  margin : 0.5rem 2rem;
+  width: 70px;
+  height: auto;
+}
+
+#navbar ul {
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+#navbar ul li {
+  margin: 1rem;
+  text-decoration: none;
+  color: c6fcf1;
+  font-size: 1.3rem;
+}
+
+.main {
+  background-color: #1f2833;
+  border-radius: 5px;
+  margin: 1rem 1rem;
+  box-shadow: 0px 4px 8px 0px;
+}
 
 .blog-image {
-  width: 50%;
-  height: 50vh;
-  border: 1px solid red;
-  margin: 10px auto;
+  width: 75%;
+  height: auto;
+  margin: 1rem auto;
 }
 
 .blog-image img {
+  border-radius: 10px;
   width: 100%;
   height: 100%;
 }
 
+.blog-content {
+  width: 85%;
+  margin: auto;
+}
+
 .blog-content h1 {
+  margin: 1rem auto;
   text-align: center;
   font-size: 2rem;
+  color: #66fcf1;
 }
 
 .blog-content p {
+  margin: 1rem 1rem;
+  text-align: justify;
   font-size: 1.2rem;
+  color: #c6fcf1;
 }
 
-.related-links ul {
+.aside-heading{
+  color: #66fcf1;
+
+}
+
+.related-links {
+  margin: 1rem auto;
+  text-align: left;
+}
+
+.related-links li {
+  border-radius: 5px;
+  background-color: black;
+  color: #c6fcf1;
+  margin: 1rem auto;
+  padding: 1rem;
   list-style: none;
+  font-size: 1.1rem;
+  /* box-shadow: 0px 4px 8px 0px #888888; */
 }
 
-.related-links ul li {
-  list-style: none;
-  margin: 0.5rem ;
+.related-links li:hover {
+  cursor: pointer;
+  transform: scale(1.01);
 }
 
+.footer {
+  background: black;
+  width: 100%;
+  height: 11vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.foot-heading {
+  font-family: carminel;
+  color: #66fcf1;
+}
+
+.foot-heading:hover {
+  border-bottom: 2px solid #c6fcf1;
+}
+.footer-icon {
+  color: #66fcf1;
+  size: 2rem;
+  display: inline;
+  margin: 0 1rem;
+}
+
+@media all and (min-width: 876px) {
+  .main {
+    flex: 3;
+    order: 2;
+  }
+  .aside2 {
+    order: 2;
+  }
+  .footer {
+    order: 4;
+  }
+}
+
+@media all and (min-width: 576px) {
+  .aside {
+    flex: 1;
+  }
+}

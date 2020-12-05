@@ -7,49 +7,59 @@
 
     <title>Blog Rendering</title>
     <link rel="stylesheet" href="./styles/style.css">
+    <script src="https://kit.fontawesome.com/95a5e83b85.js" crossorigin="anonymous"></script>
+
 
 </head>
 
 <body>
-    <header>
-        <h1>
-            Header
-        </h1>
-    </header>
-    <hr>
-    <section>
-        <div id="root">
-            <!-- Adding Blog Content -->
+    <div class="wrapper">
+        <header class="header">
+            <nav id="navbar">
+                <img src="./assets/blog.svg" alt="">
+                <ul>
+                    <li><a href="">Speaker</a></li>
+                    <li><a href="">Blog</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section class="main">
+            <div id="root">
+                <!-- Adding Blog Content -->
 
-            <!-- Blog Image Component -->
-            <!-- <div class="blog-image">
+                <!-- Blog Image Component -->
+                <!-- <div class="blog-image">
                 <img src="" alt="" srcset="">
             </div> -->
-            <!-- Blog Content Component -->
-            <!-- <div class="blog-content">
+                <!-- Blog Content Component -->
+                <!-- <div class="blog-content">
                 <h1>Title</h1>
                 <p> content</p>
             </div> -->
-        </div>
-    </section>
+            </div>
+        </section>
 
-    <aside>
+        <aside class="aside aside2">
+            <h1 class="aside-heading">Related Articles</h1>
+            <!-- Related Links Component-->
+            <div id="related-links">
 
-        <!-- Related Links Component-->
-        <div id="related-links">
-            <ul>
-                <li>Related Links</li>
-                <li>Related Links</li>
-                <li>Related Links</li>
-                <li>Related Links</li>
-            </ul>
-        </div>
-    </aside>
+            </div>
+        </aside>
 
-    <hr>
-<footer>
-    <h1>Footer</h1>
-</footer>
+
+        <footer class="footer">
+            <h1 class="foot-heading">Get in Touch ➜</h1>
+            <div>
+                <a class="footer-icon"><i class="fab fa-github fa-3x"></i></a>
+                <a class="footer-icon"><i class="fab fa-whatsapp fa-3x"></i></a>
+                <a class="footer-icon"><i class="far fa-envelope fa-3x"></i></a>
+            </div>
+        </footer>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.0/axios.min.js"
+        integrity="sha512-DZqqY3PiOvTP9HkjIWgjO6ouCbq+dxqWoJZ/Q+zPYNHmlnI2dQnbJ5bxAHpAMw+LXRm4D72EIRXzvcHQtE8/VQ=="
+        crossorigin="anonymous"></script>
     <script src="./src/app.js" type="module"></script>
 </body>
 
